@@ -33,9 +33,9 @@ pipeline {
 
 	  stage('installPlat') {
 	            steps {
-	                echo "Building..with ${WORKSPACE}"
+	                echo "Building..with C:\\ProgramData\\Jenkins\\.jenkins\\workspace"
 	                UiPathInstallPlatform (
-					   cliNupkgPath: '${WORKSPACE}\\UiPath.CLI.Windows.22.10.8438.32859.nupkg',
+					   cliNupkgPath: 'C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\Uipath_Jenkins_Latest_main\\UiPath.CLI.Windows.22.10.8438.32859.nupkg',
 					   cliVersion: 'WIN_22.10.8438.32859',
 					   forceInstall: true,
 					   traceLevel: 'None'
@@ -46,9 +46,9 @@ pipeline {
 	         // Build Stages
 	        stage('Build') {
 	            steps {
-	                echo "Building..with ${WORKSPACE}"
+	                echo "Building..with C:\\ProgramData\\Jenkins\\.jenkins\\workspace"
 	                UiPathPack (
-	                      outputPath: '${WORKSPACE}\\Output', projectJsonPath: '${WORKSPACE}\\Uipath_Jenkins_Latest', traceLevel: 'None', version: AutoVersion()
+	                      outputPath: 'C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\Output', projectJsonPath: 'C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\Uipath_Jenkins_Latest', traceLevel: 'None', version: AutoVersion()
 	        )
 	            }
 	        }
