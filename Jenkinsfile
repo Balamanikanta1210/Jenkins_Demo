@@ -44,21 +44,7 @@ pipeline {
 	        }
 
 	         // Build Stages
-	        stage('Testrun') {
-	            steps {
-	                echo "Building..with C:\\ProgramData\\Jenkins\\.jenkins\\workspace"
-	                UiPathTest (
-	                      credentials: UserPass('cb0fbc79-b4f7-46d4-8f60-74efbefbe4f2'),
-			      folderName: 'Modren Example',
- 				orchestratorAddress: 'https://desktop-dkphe2o/', 
-				orchestratorTenant: 'Default', 
-				parametersFilePath: '', 
-				testResultsOutputPath: '', 
-				testTarget: TestSet('Coverage_new'), 
-				traceLevel: 'None'
-	        )
-	            }
-	        }
+	        
 	         
 	}
 
