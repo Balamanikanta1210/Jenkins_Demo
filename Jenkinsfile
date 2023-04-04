@@ -46,10 +46,9 @@ pipeline {
 	         // Build Stages
 	        stage('Testrun') {
 	            steps {
-	                echo "Building..with C:\\ProgramData\\Jenkins\\.jenkins\\workspace"
-	                UiPathTest (
+	                UiPathTest(
 			        folderName: 'Modren Example',
- 				orchestratorAddress: 'https://desktop-dkphe2o/', 
+ 				orchestratorAddress: 'https://desktop-dkphe2o/',
 				orchestratorTenant: 'Default', 
 				parametersFilePath: '', 
 				testResultsOutputPath: '', 
