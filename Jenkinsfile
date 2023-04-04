@@ -47,6 +47,7 @@ pipeline {
 	        stage('Testrun') {
 	            steps {
 	                UiPathTest(
+                                timeout: 10000,
 			        folderName: 'Modren Example',
  				orchestratorAddress: 'https://desktop-dkphe2o/',
 				orchestratorTenant: 'Default', 
@@ -59,6 +60,7 @@ pipeline {
 	            }
 	        }
 	         
+
 	}
 
 	}
